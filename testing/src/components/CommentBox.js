@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import * as actions from "actions";
 
 const CommentBox = () => {
   const [comment, setComment] = useState("");
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     setComment(e.target.value);
